@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  activeLink: string = 'userProfile';
   constructor() { }
 
   ngOnInit(): void {
