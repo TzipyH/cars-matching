@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.header h1{   
+    font-size: 56px;
+    color: rgb(30, 30, 120);
+    margin: auto;
+}
+
+.header img{
+    width: 120px;
+    height: 120px;
+    margin-right: 8px;
+}
+
+.header .header-icon{
+    display: flex;
+    justify-content: center;
+    margin-left: 32px;
+}
+
+.header .mat-tab-group{
+    margin: auto;
+    width: 40%;
+}
