@@ -1,0 +1,34 @@
+.user-profile{  
+    width: 80%;
+    margin: auto;
+    padding-top: 136px;
+    padding-bottom: 56px;
+    z-index: -1;
+}
+.user-profile h2,h3,p{
+    text-align: center;
+}
+
+.user-profile mat-form-field, mat-radio-group, .location-details{
+    width: 70%;
+    padding: 0% 15%;
+    margin-bottom: 8px;
+}
+
+.user-profile input[type="color"]{
+    width: 64px;
+}
+
+.user-profile mat-radio-button{
+    padding: 0px 4px;
+}
+
+.user-profile .location-details mat-form-field{
+    width: 23%;
+    padding: 0px 8px;
+}
+
+.user-profile button{
+    width: 20%;
+    margin: 16px 40%;
+}
