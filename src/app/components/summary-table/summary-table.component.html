@@ -1,15 +1,22 @@
 <div class="mat-elevation-z8 small-table">
   <table mat-table class="full-width-table" matSort aria-label="Elements">
-    <!-- Id Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
-      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+
+    <!-- Headers Column -->
+    <ng-container matColumnDef="header">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+      <td mat-cell *matCellDef="let row"><strong>{{row.header}}</strong></td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-      <td mat-cell *matCellDef="let row">{{row.name}}</td>
+    <!-- Male Column -->
+    <ng-container matColumnDef="male">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Male</strong></th>
+      <td mat-cell *matCellDef="let row">{{row.male}}</td>
+    </ng-container>
+
+    <!-- Female Column -->
+    <ng-container matColumnDef="female">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Female</strong></th>
+      <td mat-cell *matCellDef="let row">{{row.female}}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

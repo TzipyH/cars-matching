@@ -1,4 +1,4 @@
-export interface NumOfSeatsByCityAndMotorTypeViewModel{
+export interface NumOfSeatsByCityAndMotorTypeViewModel {
     labels: string[],
     data: {
         data: number[],

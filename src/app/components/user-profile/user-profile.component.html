@@ -43,9 +43,12 @@
             <input matInput [matDatepicker]="picker" formControlName="birthDate" [errorStateMatcher]="matcher">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="userProfileForm.controls['birthDate'].invalid">
+                Invalid Birth Date
+            </mat-error>
             <mat-error *ngIf="userProfileForm.controls['birthDate'].hasError('required')">
                 Birth Date is <strong>required</strong>
-            </mat-error>
+            </mat-error>           
         </mat-form-field>
 
         <div class="location-details">

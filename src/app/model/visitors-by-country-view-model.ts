@@ -1,4 +1,4 @@
-export interface VisitorsByCountryViewModel{
+export interface VisitorsByCountryViewModel {
     labels: string[],
     data: number[]
 }

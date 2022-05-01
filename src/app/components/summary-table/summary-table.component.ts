@@ -1,13 +1,16 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { SummaryTableDataSource, SummaryTableItem } from './summary-table-datasource';
+import { SummaryTableItem } from 'src/app/model/summary-table-item';
+import { UsersService } from 'src/app/services/users.service';
+import { SummaryTableDataSource } from './summary-table-datasource';
 
 @Component({
   selector: 'app-summary-table',
   templateUrl: './summary-table.component.html',
-  styleUrls: ['./summary-table.component.css']
+  styleUrls: ['./summary-table.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SummaryTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -15,11 +18,10 @@ export class SummaryTableComponent implements AfterViewInit {
   @ViewChild(MatTable) table!: MatTable<SummaryTableItem>;
   dataSource: SummaryTableDataSource;
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['header','male', 'female'];
 
-  constructor() {
-    this.dataSource = new SummaryTableDataSource();
+  constructor(private usersService: UsersService) {
+    this.dataSource = new SummaryTableDataSource(usersService.getTableData());
   }
 
   ngAfterViewInit(): void {
