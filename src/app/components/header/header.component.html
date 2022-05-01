@@ -1,14 +1,12 @@
 <div class="header">
   <div class="header-icon">
     <img src="./assets/images/cars icon.png">
-    <h1>car <br /> match</h1>
+    <h1>car <br/> match</h1>
   </div>
-  <mat-tab-group>
-    <a router-link="/userProfile">
-      <mat-tab label="User Profile"></mat-tab>
-    </a>
-    <a router-link="/dashboard">
-      <mat-tab label="Dashboard"></mat-tab>
-    </a>
-  </mat-tab-group>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link (click)="activeLink = 'userProfile'" [active]="activeLink == 'userProfile'"
+      [routerLink]="['/userProfile']">UserProfile</a>
+    <a mat-tab-link (click)="activeLink = 'dashboard'" [active]="activeLink == 'dashboard'"
+      [routerLink]="['/dashboard']">Dashboard</a>
+  </nav>
 </div>

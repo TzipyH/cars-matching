@@ -1,0 +1,28 @@
+<div class="grid-container dashboard">
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+      <app-card title="Hobbies By Gender">
+        <app-hobbies-by-gender [radarChartLabels]="hobbiesByGenderChartData.labels"
+          [radarChartData]="hobbiesByGenderChartData.data"></app-hobbies-by-gender>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+      <app-card title="Visitors By Country">
+        <app-visitors-by-country [pieChartLabels]="visitorsByCountryChartData.labels"
+          [pieChartData]="visitorsByCountryChartData.data"></app-visitors-by-country>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.longChart?.cols" [rowspan]="( cardLayout | async )?.longChart?.rows">
+      <app-card title="Average Num Of Seats By City And Motor Type">
+        <app-num-of-seats-by-city-and-motor-type
+        [barChartLabels]="numOfSeatsByCityAndMotorTypeChartData.labels"
+        [barChartData]="numOfSeatsByCityAndMotorTypeChartData.data"></app-num-of-seats-by-city-and-motor-type>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows">
+      <app-card title="Summary Table">
+        <app-summary-table></app-summary-table>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

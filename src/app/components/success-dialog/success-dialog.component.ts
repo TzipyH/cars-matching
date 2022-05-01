@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css'],
+  selector: 'app-success-dialog',
+  templateUrl: './success-dialog.component.html',
+  styleUrls: ['./success-dialog.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FooterComponent implements OnInit {
+export class SuccessDialogComponent implements OnInit {
 
   constructor() { }
 

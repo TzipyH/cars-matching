@@ -1,6 +1,6 @@
 .header{
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     padding-top: 8px;
     position: fixed;
     top: 0px;
@@ -27,7 +27,8 @@
     margin-left: 32px;
 }
 
-.header .mat-tab-group{
+.header nav{
     margin: auto;
     width: 40%;
+    max-width: 320px;
 }
