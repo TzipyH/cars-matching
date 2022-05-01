@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserProfileComponent } from './user-profile.component';
+import { VisitorsByCountryComponent } from './visitors-by-country.component';
 
-describe('UserProfileComponent', () => {
-  let component: UserProfileComponent;
-  let fixture: ComponentFixture<UserProfileComponent>;
+describe('VisitorsByCountryComponent', () => {
+  let component: VisitorsByCountryComponent;
+  let fixture: ComponentFixture<VisitorsByCountryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserProfileComponent ]
+      declarations: [ VisitorsByCountryComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserProfileComponent);
+    fixture = TestBed.createComponent(VisitorsByCountryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

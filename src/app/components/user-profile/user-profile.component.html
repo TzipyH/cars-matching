@@ -3,47 +3,47 @@
     <h3>Welcome to Car Match detailed questionnaire</h3>
     <p>
         The follow questionnaire will help us direct you to the next perfect car for you <br>
-        And save you tens of thousands of shekels in the cost of the vehicle and its maintenance over the years. <br>
+        And save you tens of thousands of dollars in the cost of the vehicle and its maintenance over the years. <br>
         Please fill in the following questions:
     </p>
     <form [formGroup]="userProfileForm">
         <mat-form-field>
             <mat-label>Full Name</mat-label>
-            <input type="text" matInput formControlName="fullNameFormControl" [errorStateMatcher]="matcher">
-            <mat-error *ngIf="userProfileForm.controls['fullNameFormControl'].hasError('pattern')">
+            <input type="text" matInput formControlName="fullName" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="userProfileForm.controls['fullName'].hasError('pattern')">
                 Invalid Full Name
             </mat-error>
-            <mat-error *ngIf="userProfileForm.controls['fullNameFormControl'].hasError('required')">
+            <mat-error *ngIf="userProfileForm.controls['fullName'].hasError('required')">
                 Full Name is <strong>required</strong>
             </mat-error>
         </mat-form-field>
 
-        <mat-radio-group formControlName="genderFormControl">
+        <mat-radio-group formControlName="gender">
             <mat-label>Gender: </mat-label>
             <mat-radio-button value="1" [checked]="true">Male</mat-radio-button>
             <mat-radio-button value="2">Female</mat-radio-button>
-            <mat-error *ngIf="userProfileForm.controls['genderFormControl'].hasError('required')">
+            <mat-error *ngIf="userProfileForm.controls['gender'].hasError('required')">
                 Gender is <strong>required</strong>
             </mat-error>
         </mat-radio-group>
 
         <mat-form-field>
             <mat-label>Email</mat-label>
-            <input type="email" matInput formControlName="emailFormControl" [errorStateMatcher]="matcher">
-            <mat-error *ngIf="userProfileForm.controls['emailFormControl'].hasError('email')">
+            <input type="email" matInput formControlName="email" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="userProfileForm.controls['email'].hasError('email')">
                 Invalid Email
             </mat-error>
-            <mat-error *ngIf="userProfileForm.controls['emailFormControl'].hasError('required')">
+            <mat-error *ngIf="userProfileForm.controls['email'].hasError('required')">
                 Email is <strong>required</strong>
             </mat-error>
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Birth Date</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="birthDateFormControl" [errorStateMatcher]="matcher">
+            <input matInput [matDatepicker]="picker" formControlName="birthDate" [errorStateMatcher]="matcher">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
-            <mat-error *ngIf="userProfileForm.controls['birthDateFormControl'].hasError('required')">
+            <mat-error *ngIf="userProfileForm.controls['birthDate'].hasError('required')">
                 Birth Date is <strong>required</strong>
             </mat-error>
         </mat-form-field>
@@ -52,33 +52,33 @@
             <span>Location Details: </span>
             <mat-form-field>
                 <mat-label>Address</mat-label>
-                <input type="text" matInput formControlName="addressFormControl" [errorStateMatcher]="matcher">
-                <mat-error *ngIf="userProfileForm.controls['addressFormControl'].hasError('pattern')">
+                <input type="text" matInput formControlName="address" [errorStateMatcher]="matcher">
+                <mat-error *ngIf="userProfileForm.controls['address'].hasError('pattern')">
                     Invalid Address
                 </mat-error>
-                <mat-error *ngIf="userProfileForm.controls['addressFormControl'].hasError('required')">
+                <mat-error *ngIf="userProfileForm.controls['address'].hasError('required')">
                     Address is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>City</mat-label>
-                <input type="text" matInput formControlName="cityFormControl" [errorStateMatcher]="matcher">
-                <mat-error *ngIf="userProfileForm.controls['cityFormControl'].hasError('pattern')">
+                <input type="text" matInput formControlName="city" [errorStateMatcher]="matcher">
+                <mat-error *ngIf="userProfileForm.controls['city'].hasError('pattern')">
                     Invalid City
                 </mat-error>
-                <mat-error *ngIf="userProfileForm.controls['cityFormControl'].hasError('required')">
+                <mat-error *ngIf="userProfileForm.controls['city'].hasError('required')">
                     City is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>Country</mat-label>
-                <input type="text" matInput formControlName="countryFormControl" [errorStateMatcher]="matcher">
-                <mat-error *ngIf="userProfileForm.controls['countryFormControl'].hasError('pattern')">
+                <input type="text" matInput formControlName="country" [errorStateMatcher]="matcher">
+                <mat-error *ngIf="userProfileForm.controls['country'].hasError('pattern')">
                     Invalid Country
                 </mat-error>
-                <mat-error *ngIf="userProfileForm.controls['countryFormControl'].hasError('required')">
+                <mat-error *ngIf="userProfileForm.controls['country'].hasError('required')">
                     Country is <strong>required</strong>
                 </mat-error>
             </mat-form-field>
@@ -86,39 +86,39 @@
 
         <mat-form-field>
             <mat-label>List Of Hobbies</mat-label>
-            <mat-select formControlName="listOfHobbiesFormControl" [errorStateMatcher]="matcher" multiple>
+            <mat-select formControlName="listOfHobbies" [errorStateMatcher]="matcher" multiple>
               <mat-option *ngFor="let hobby of hobbiesList" [value]="hobby">{{hobby}}</mat-option>
             </mat-select>
-            <mat-error *ngIf="userProfileForm.controls['listOfHobbiesFormControl'].hasError('required')">
+            <mat-error *ngIf="userProfileForm.controls['listOfHobbies'].hasError('required')">
                 List Of Hobbies is <strong>required</strong>
             </mat-error>
           </mat-form-field>
 
           <mat-form-field>
             <mat-label>Favorite Color</mat-label>
-            <input type="color" matInput formControlName="favoriteColorFormControl" [errorStateMatcher]="matcher">
-            <mat-error *ngIf="userProfileForm.controls['favoriteColorFormControl'].hasError('required')">
+            <input type="color" matInput formControlName="favoriteColor" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="userProfileForm.controls['favoriteColor'].hasError('required')">
                 Favorite Color is <strong>required</strong>
             </mat-error>
         </mat-form-field>
 
         <mat-form-field>
             <mat-label>Required Amount Of Seats</mat-label>
-            <input type="number" matInput formControlName="amountOfSeatsFormControl" [errorStateMatcher]="matcher">
-            <mat-error *ngIf="userProfileForm.controls['amountOfSeatsFormControl'].hasError('min') 
-            || userProfileForm.controls['amountOfSeatsFormControl'].hasError('max')">
+            <input type="number" matInput formControlName="numOfSeats" [errorStateMatcher]="matcher">
+            <mat-error *ngIf="userProfileForm.controls['numOfSeats'].hasError('min') 
+            || userProfileForm.controls['numOfSeats'].hasError('max')">
                 Amount Of Seats need to be between 2-7
             </mat-error>
-            <mat-error *ngIf="userProfileForm.controls['amountOfSeatsFormControl'].hasError('required')">
+            <mat-error *ngIf="userProfileForm.controls['numOfSeats'].hasError('required')">
                 Amount Of Seats is <strong>required</strong>
             </mat-error>
         </mat-form-field>
 
-        <mat-radio-group formControlName="motorTypeFormControl">
+        <mat-radio-group formControlName="motorType">
             <mat-label>Motor Type: </mat-label>
             <mat-radio-button value="1" [checked]="true">Electric</mat-radio-button>
             <mat-radio-button value="2">Fuel</mat-radio-button>
-            <mat-error *ngIf="userProfileForm.controls['motorTypeFormControl'].hasError('required')">
+            <mat-error *ngIf="userProfileForm.controls['motorType'].hasError('required')">
                 Motor Type is <strong>required</strong>
             </mat-error>
         </mat-radio-group>
